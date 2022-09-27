@@ -1,5 +1,6 @@
 .theme-switch-container {
   width: 50rem;
+  max-width: 95%;
   margin: 0 auto;
   padding-top: 2rem;
   display: flex;
