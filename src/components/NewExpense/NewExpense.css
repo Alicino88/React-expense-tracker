@@ -54,3 +54,13 @@
   background-color: #76c5f3;
   border-color: #76c5f3;
 }
+
+@media (max-width: 580px) {
+  .new-expense {
+    padding: 1rem;
+  }
+
+  .new-expense-light {
+    padding: 1rem;
+  }
+}
