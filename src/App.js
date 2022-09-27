@@ -5,6 +5,7 @@ to the component that has the data (the children one) and it is fired there by p
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 import { useState } from "react";
+import { DarkModeProvider } from "./components/Context/LightModeContext";
 
 function App() {
   const INITIAL_EXPENSES = [
@@ -41,10 +42,12 @@ function App() {
     });
   };
   return (
-    <div>
-      <NewExpense onAddExpense={addExpenseHandler} />
-      <Expenses items={expenses} />
-    </div>
+    <>
+      <DarkModeProvider>
+        <NewExpense onAddExpense={addExpenseHandler} />
+        <Expenses items={expenses} />
+      </DarkModeProvider>
+    </>
   );
 }
 
