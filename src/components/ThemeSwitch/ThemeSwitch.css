@@ -1,7 +1,7 @@
 .theme-switch-container {
   width: 50rem;
   margin: 0 auto;
-  margin-top: 2rem;
+  padding-top: 2rem;
   display: flex;
   justify-content: flex-end;
 }
