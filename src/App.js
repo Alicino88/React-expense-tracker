@@ -6,6 +6,7 @@ import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 import { useState } from "react";
 import { DarkModeProvider } from "./components/Context/LightModeContext";
+import Background from "./components/UI/Background";
 import ThemeSwitch from "./components/ThemeSwitch/ThemeSwitch";
 
 function App() {
@@ -45,9 +46,11 @@ function App() {
   return (
     <>
       <DarkModeProvider>
-        <ThemeSwitch />
-        <NewExpense onAddExpense={addExpenseHandler} />
-        <Expenses items={expenses} />
+        <Background>
+          <ThemeSwitch />
+          <NewExpense onAddExpense={addExpenseHandler} />
+          <Expenses items={expenses} />
+        </Background>
       </DarkModeProvider>
     </>
   );
