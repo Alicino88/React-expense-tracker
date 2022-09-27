@@ -5,12 +5,13 @@ const DarkModeContext = createContext();
 function DarkModeProvider(props) {
   const [lightMode, setLightMode] = useState(false);
 
-  const toggleDarkMode = () => {
+  const toggleMode = () => {
     setLightMode(!lightMode);
+    console.log(lightMode);
   };
   return (
     <>
-      <DarkModeContext.Provider value={{ lightMode, toggleDarkMode }}>
+      <DarkModeContext.Provider value={{ lightMode, toggleMode }}>
         {props.children}
       </DarkModeContext.Provider>
     </>
