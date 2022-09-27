@@ -6,6 +6,7 @@ import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 import { useState } from "react";
 import { DarkModeProvider } from "./components/Context/LightModeContext";
+import ThemeSwitch from "./components/ThemeSwitch/ThemeSwitch";
 
 function App() {
   const INITIAL_EXPENSES = [
@@ -44,6 +45,7 @@ function App() {
   return (
     <>
       <DarkModeProvider>
+        <ThemeSwitch />
         <NewExpense onAddExpense={addExpenseHandler} />
         <Expenses items={expenses} />
       </DarkModeProvider>

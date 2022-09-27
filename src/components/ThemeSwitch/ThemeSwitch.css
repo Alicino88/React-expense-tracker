@@ -1,0 +1,29 @@
+.theme-switch-container {
+  width: 50rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-dark {
+  color: white;
+  background-color: #3f3f3f;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  display: flex;
+}
+
+.button-light {
+  color: #3f3f3f;
+  background-color: white;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  display: flex;
+}
+
+.icon-style {
+  margin-right: 0.5rem;
+}
