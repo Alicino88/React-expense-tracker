@@ -5,3 +5,12 @@
   width: 50rem;
   max-width: 95%;
 }
+
+.expenses-light {
+  padding: 1rem;
+  background-color: white;
+  border: 3px solid #3f3f3f;
+  margin: 2rem auto;
+  width: 50rem;
+  max-width: 95%;
+}

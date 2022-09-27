@@ -3,8 +3,12 @@ import "./Expenses.css";
 import ExpensesFilter from "./ExpensesFilter";
 import { useState } from "react";
 import ExpenseList from "./ExpensesList";
+import { useContext } from "react";
+import { DarkModeContext } from "../Context/LightModeContext";
 
 function Expenses(props) {
+  const { lightMode } = useContext(DarkModeContext);
+
   const [selectedYear, setSelectedYear] = useState("2020");
   const filterChangeHandler = (data) => {
     console.log(data);
@@ -18,7 +22,7 @@ function Expenses(props) {
 
   return (
     <>
-      <Card className="expenses">
+      <Card className={!lightMode ? "expenses" : "expenses-light"}>
         {/*visibleYear is passesd as a prop to create two-way binding. It's set as the initial value of the select element */}
         <ExpensesFilter
           visibleYear={selectedYear}
