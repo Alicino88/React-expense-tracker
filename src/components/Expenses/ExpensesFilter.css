@@ -23,3 +23,21 @@
   border-radius: 6px;
   border: 1px solid #ccc;
 }
+
+.expenses-filter-light {
+  color: #3f3f3f;
+  padding: 0 1rem;
+}
+
+.expenses-filter-light label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.expenses-filter-light select {
+  font: inherit;
+  padding: 0.5rem 3rem;
+  font-weight: bold;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
