@@ -17,7 +17,7 @@ function Expenses(props) {
   });
 
   return (
-    <div>
+    <>
       <Card className="expenses">
         {/*visibleYear is passesd as a prop to create two-way binding. It's set as the initial value of the select element */}
         <ExpensesFilter
@@ -54,7 +54,7 @@ function Expenses(props) {
             />
           ))
         )}*/}
-    </div>
+    </>
   );
 }
 
