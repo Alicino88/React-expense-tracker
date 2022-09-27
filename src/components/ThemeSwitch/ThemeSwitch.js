@@ -12,7 +12,7 @@ function ThemeSwitch() {
         <button className={["button-dark"]} onClick={toggleMode}>
           <span>
             <LightModeIcon className={["icon-style"]} />
-          </span>{" "}
+          </span>
           light theme
         </button>
       )}
