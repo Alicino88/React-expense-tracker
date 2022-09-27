@@ -1,7 +1,10 @@
 import "./NewExpense.css";
 import ExpenseForm from "./ExpenseForm";
 import { useState } from "react";
+import { useContext } from "react";
+import { DarkModeContext } from "../Context/LightModeContext";
 const NewExpense = (props) => {
+  const { lightMode } = useContext(DarkModeContext);
   /*isEditing is initially false and Add new expense button is shown*/
   const [isEditing, setIsEditing] = useState(false);
   /*enteredExpenseData arguments arrive from ExpenseForm child component(the data we put into the form) */
@@ -25,7 +28,7 @@ const NewExpense = (props) => {
   };
 
   return (
-    <div className="new-expense">
+    <div className={!lightMode ? "new-expense" : "new-expense-light"}>
       {!isEditing && (
         <button onClick={startEditingHandler}>Add New Expense</button>
       )}
